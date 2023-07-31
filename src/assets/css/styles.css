@@ -41,7 +41,15 @@
 .landing-text-L{
     font-weight: 700;
     font-size: 30px;
-    margin-left: 50px;
+    text-align: center;
+}
+@media(min-width: 768px){
+    .landing-text-L{
+        font-weight: 700;
+        font-size: 30px;
+        margin-left: 50px;
+        text-align: left;
+    }
 }
 .resume-text{
     margin-left: 8px;
@@ -50,8 +58,17 @@
 .landing-text-S{
     font-weight: 600;
     font-size: 15px;
-    margin-left: 50px;
+    text-align: center;
     margin-top: 20px;
+}
+@media(min-width: 768px){
+    .landing-text-S{
+        font-weight: 600;
+        font-size: 15px;
+        margin-left: 50px;
+        margin-top: 20px;
+        text-align: left;
+    }
 }
 .get-started-btn{
     margin-top: 160px;
@@ -59,8 +76,22 @@
     width: 150px;
     color: white;
     padding: 10px;
-    margin-left: 50px;
+    align-self: center;
     text-align: center;
     border-radius: 10px;
     font-weight: 500;
+}
+@media(min-width: 1024px){
+    .get-started-btn{
+        margin-top: 160px;
+        background-color: #007A5E;
+        width: 150px;
+        color: white;
+        padding: 10px;
+        margin-left: 50px;
+        text-align: center;
+        border-radius: 10px;
+        font-weight: 500;
+        align-self: self-start;
+    }
 }

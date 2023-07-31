@@ -34,7 +34,7 @@ const Landing = () => {
             </div>
 
             <div className='get-started-btn'>
-                <Link to='#'>
+                <Link to='/details_1' className='hover:scale-125 duration-200'>
                     Get Started
                 </Link>
             </div>
