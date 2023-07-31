@@ -1,14 +1,17 @@
 import React, {useState} from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const DetailsHeader = () => {
     const [fullname, setFullname] = useState('')
     const [address, setAddress] = useState('')
     const [phone, setPhone] = useState('')
     const [email, setEmail] = useState('')
+    const navigate = useNavigate()
 
     const [details1Array, setDetails1Array] = useState([]);
     const handleFormSubmit = (formData) => {
         setDetails1Array([...details1Array, formData]);
+        navigate('/details_2')
     };
   return (
     <div className='details-page'>
@@ -60,6 +63,9 @@ const DetailsHeader = () => {
                     />
                 </div>
 
+                <button type='submit' className='next-btn'>
+                    Next
+                </button>
             </form>
         </div>
     </div>

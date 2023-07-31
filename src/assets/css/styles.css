@@ -134,3 +134,9 @@
     align-self: center;
    margin-left: 50px;
 }
+.next-btn{
+    text-decoration: underline;
+    color: #007A5E;
+    margin-top: 20px;
+    justify-self: end;
+}
