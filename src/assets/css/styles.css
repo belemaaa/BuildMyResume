@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center; 
     align-items: center;
+    overflow: hidden;
 }
 .splash-text{
     display: flex;
@@ -16,5 +17,8 @@
 .splash-text p{
     color: #007A5E;
     font-weight: 850;
+    font-size: 28px;
+}
+.splash-icon{
     font-size: 28px;
 }

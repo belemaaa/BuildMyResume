@@ -6,7 +6,7 @@ const SplashScreen = () => {
   return (
     <div className='splash'>
         <div className='splash-text'>
-            <GrResume/>
+            <GrResume className='splash-icon'/>
             <p>BuildMyResume</p>
         </div>
     </div>
