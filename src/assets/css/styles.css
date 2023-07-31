@@ -22,3 +22,20 @@
 .splash-icon{
     font-size: 28px;
 }
+.landing{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    margin: 0;
+    height: 100vh;
+    justify-content: center; 
+    align-items: center;
+    overflow: hidden;
+}
+@media (min-width: 768px){
+    .resume-sample img{
+        height: 500px;
+        width: 500px;
+    }
+    
+}
