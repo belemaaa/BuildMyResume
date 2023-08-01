@@ -124,7 +124,7 @@
 }
 .details-box input{
     width: 315px;
-    height: 30px;
+    height: 34px;
     border-radius: 5px;
     margin-bottom: 15px;
     padding: 10px;
@@ -138,5 +138,9 @@
     text-decoration: underline;
     color: #007A5E;
     margin-top: 20px;
-    justify-self: end;
+    margin-left: 274px;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: -0.3px;
+    line-height: 14px;
 }
