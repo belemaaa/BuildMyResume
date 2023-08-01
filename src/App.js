@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SplashScreen from './components/SplashScreen';
 import SplashChange from './components/SplashChange';
-import DetailsHeader from './components/DetailsHeader';
-import Details2 from './components/Details2';
+import GeneralInformation from './components/GeneralInformation';
+import PersonalData from './components/PersonalData';
 
 function App() {
   return (
@@ -10,8 +10,8 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' exact element={<SplashChange/>} />
-          <Route path='/details_1' element={<DetailsHeader/>} />
-          <Route path='/details_2' element={<Details2/>} />
+          <Route path='/general_information' element={<GeneralInformation/>} />
+          <Route path='/personal_data' element={<PersonalData/>} />
         </Routes>
       </Router>
     </div>

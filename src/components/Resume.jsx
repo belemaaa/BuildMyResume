@@ -4,7 +4,7 @@ const Resume = () => {
     const [resumeData1, setResumeData1] = useState([]);
 
     useEffect(() => {
-      const storedData1 = localStorage.getItem('generalData');
+      const storedData1 = localStorage.getItem('generalInformation');
       if (storedData1) {
         setResumeData1(JSON.parse(storedData1));
       }

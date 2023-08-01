@@ -1,8 +1,7 @@
 import React, {useState} from 'react'
 import { useNavigate } from 'react-router-dom'
-import Resume from './Resume'
 
-const DetailsHeader = () => {
+const GeneralInformation = () => {
     const [fullname, setFullname] = useState('')
     const [address, setAddress] = useState('')
     const [phone, setPhone] = useState('')
@@ -23,7 +22,7 @@ const DetailsHeader = () => {
         setDetails1Array([...details1Array, formData]);
 
         // Save the form data to localStorage
-        localStorage.setItem('generalData', JSON.stringify(details1Array));
+        localStorage.setItem('generalInformation', JSON.stringify(details1Array));
 
         navigate('/details_2');
     };
@@ -95,9 +94,8 @@ const DetailsHeader = () => {
                 </button>
             </form>
         </div>
-        <Resume {...details1Array}/>
     </div>
   )
 }
 
-export default DetailsHeader
+export default GeneralInformation
