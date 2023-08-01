@@ -1,3 +1,12 @@
+.loader{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    margin-top: 300px;
+}
 .splash{
     margin: 0;
     height: 100vh;
@@ -101,6 +110,10 @@
 
 .details-page{
     margin: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    overflow: hidden;
 }
 @media(min-width: 668px){
     .details-page{
