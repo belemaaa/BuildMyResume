@@ -15,7 +15,7 @@ const DetailsHeader = () => {
     };
   return (
     <div className='details-page'>
-        <div className='details-div shadow-lg'>
+        <div className='details-div'>
             <p className='p1'>To build your resume, please fill out the fields below</p>
             <p className='p2'>Note: These details will represent the fields in your resume.</p>
 
