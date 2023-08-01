@@ -80,7 +80,7 @@ const PersonalData = () => {
                     />
                 </div>
 
-                <Link to='/general_information' className=''>
+                <Link to='/general_information' className='previous-btn'>
                     Previous
                 </Link>
 

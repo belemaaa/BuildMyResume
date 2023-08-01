@@ -126,7 +126,7 @@
 .details-div{
     margin-top: 60px;
 }
-@media(min-width: 668px){
+@media(min-width: 432px){
     .details-div{
         padding: 70px;
         border-radius: 10px;
@@ -212,8 +212,19 @@
 .next-btn{
     text-decoration: underline;
     color: #007A5E;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-left: 160px;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: -0.3px;
+    line-height: 14px;
+    margin-bottom: 30px;
+}
+.previous-btn{
+    text-decoration: underline;
+    color: #007A5E;
+    margin-top: 40px;
+    margin-right: 70px;
     font-weight: 600;
     font-size: 18px;
     letter-spacing: -0.3px;
