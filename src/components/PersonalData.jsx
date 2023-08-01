@@ -1,7 +1,11 @@
-import React, {useState} from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, {useState, useEffect} from 'react'
+import { useNavigate, Link } from 'react-router-dom'
 
 const PersonalData = () => {
+    useEffect(() => {
+        window.scrollTo(0,0)
+    }, [])
+
     const [sex, setSex] = useState('')
     const [nationality, setNatonality] = useState('')
     const [state, setState] = useState('')
@@ -73,9 +77,12 @@ const PersonalData = () => {
                         className='border'
                         maxLength={20}
                         onChange={(e) => setMaritalStatus(e.target.value)}
-                        required
                     />
                 </div>
+
+                <Link to='/general_information' className=''>
+                    Previous
+                </Link>
 
                 <button type='submit' className='next-btn'>
                     Next

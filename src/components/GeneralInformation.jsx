@@ -3,6 +3,10 @@ import { useNavigate } from 'react-router-dom'
 import SquareLoader from "react-spinners/SquareLoader";
 
 const GeneralInformation = () => {
+    useEffect(() => {
+        window.scrollTo(0,0)
+    }, [])
+
     const [fullname, setFullname] = useState('')
     const [address, setAddress] = useState('')
     const [phone, setPhone] = useState('')
@@ -35,7 +39,7 @@ const GeneralInformation = () => {
         setLoading(true)
         setTimeout(() => {
             setLoading(false)
-        }, 5000)
+        }, 4000)
     }, [])
 
   return (
