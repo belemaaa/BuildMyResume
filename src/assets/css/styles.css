@@ -97,18 +97,17 @@
         align-self: self-start;
     }
 }
+
+
 .details-page{
     margin: 0;
-    height: 100vh;
 }
 @media(min-width: 668px){
     .details-page{
         margin: 0;
-        height: 100vh;
         display: flex;
         justify-content: center; 
         align-items: center;
-        /* overflow: hidden; */
     }
 }
 .details-div{
@@ -160,6 +159,13 @@
         margin-bottom: 30px;
     }
 }
+.form-heading{
+    text-align: center;
+    font-weight: 600;
+    font-size: 17px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
 .details-box label{
     font-weight: 420;
     font-size: 14px;
@@ -170,7 +176,15 @@
     border-radius: 5px;
     margin-bottom: 20px;
     padding: 10px;
-    font-size: 12px;
+    font-size: 13px;
+}
+.textarea{
+    width: 350px;
+    height: 160px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 13px;
 }
 .details1form{
     align-self: center;
@@ -191,4 +205,5 @@
     font-size: 18px;
     letter-spacing: -0.3px;
     line-height: 14px;
+    margin-bottom: 30px;
 }

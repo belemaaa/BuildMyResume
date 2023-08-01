@@ -6,6 +6,7 @@ const DetailsHeader = () => {
     const [address, setAddress] = useState('')
     const [phone, setPhone] = useState('')
     const [email, setEmail] = useState('')
+    const [details, setDetails] = useState('')
     const navigate = useNavigate()
 
     const [details1Array, setDetails1Array] = useState([]);
@@ -18,6 +19,8 @@ const DetailsHeader = () => {
         <div className='details-div'>
             <p className='p1'>To build your resume, please fill out the fields below</p>
             <p className='p2'>Note: These details will represent the fields in your resume.</p>
+
+            <p className='form-heading'>(GENERAL INFORMATION)</p>
 
             <form method='POST' onSubmit={handleFormSubmit} className='details1form'>
                 <div className='details-box'>
@@ -59,6 +62,16 @@ const DetailsHeader = () => {
                         className='border'
                         maxLength={250}
                         onChange={(e) => setEmail(e.target.value)}
+                        required
+                    />
+                </div>
+
+                <div className='details-box'>
+                    <label>Tell us something about yourself...</label><br/>
+                    <textarea 
+                        type='text'
+                        className='textarea border'
+                        onChange={(e) => setDetails(e.target.value)}
                         required
                     />
                 </div>
