@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const GeneralInformation = () => {
@@ -10,7 +10,7 @@ const GeneralInformation = () => {
     const navigate = useNavigate()
 
     const [details1Array, setDetails1Array] = useState([]);
-    const handleFormSubmit = (e) => {
+      const handleFormSubmit = (e) => {
         e.preventDefault();
         const formData = {
           fullname,
@@ -21,10 +21,10 @@ const GeneralInformation = () => {
         };
         setDetails1Array([...details1Array, formData]);
 
-        // Save the form data to localStorage
-        localStorage.setItem('generalInformation', JSON.stringify(details1Array));
-
-        navigate('/details_2');
+         // Save the form data to localStorage after the form submission
+        localStorage.setItem('generalInformation', JSON.stringify([...details1Array, formData]));
+    
+        navigate('/resume');
     };
 
   return (

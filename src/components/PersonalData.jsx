@@ -22,7 +22,7 @@ const PersonalData = () => {
         // Save the form data to localStorage
         localStorage.setItem('personalData', JSON.stringify(details2Array));
 
-        navigate('/experience');
+        navigate('/resume');
     };
 
   return (
