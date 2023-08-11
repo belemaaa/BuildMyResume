@@ -23,7 +23,7 @@ const PersonalData = () => {
         };
         setDetails2Array([...details2Array, formData]);
 
-        // Save the form data to localStorage
+        // Save data to localStorage
         localStorage.setItem('personalData', JSON.stringify(details2Array));
 
         navigate('/experience');
