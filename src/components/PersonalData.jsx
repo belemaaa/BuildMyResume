@@ -40,6 +40,7 @@ const PersonalData = ({setPersonalData}) => {
                         className='border'
                         type='text'
                         maxLength={20}
+                        value={sex}
                         onChange={(e) => setSex(e.target.value)}
                         required
                     />
@@ -51,6 +52,7 @@ const PersonalData = ({setPersonalData}) => {
                         type='text'
                         className='border'
                         maxLength={50}
+                        value={nationality}
                         onChange={(e) => setNatonality(e.target.value)}
                         required
                     />
@@ -61,6 +63,7 @@ const PersonalData = ({setPersonalData}) => {
                     <input 
                         type='text'
                         className='border'
+                        value={state}
                         onChange={(e) => setState(e.target.value)}
                         required
                     />
@@ -72,6 +75,7 @@ const PersonalData = ({setPersonalData}) => {
                         type='text'
                         className='border'
                         maxLength={20}
+                        value={maritalStatus}
                         onChange={(e) => setMaritalStatus(e.target.value)}
                     />
                 </div>

@@ -4,7 +4,7 @@ import jsPDF from 'jspdf';
 import {Text, StyleSheet } from '@react-pdf/renderer';
 
 
-const Resume = ({generalInfo, personalData}) => {
+const Resume = ({generalInfo, personalData, experience}) => {
   const [pdfGenerated, setPdfGenerated] = useState(false);
   const [resumeData, setResumeData] = useState({});
 
@@ -18,7 +18,6 @@ const Resume = ({generalInfo, personalData}) => {
     doc.text(`Email: ${generalInfo.email}`, 10, 60);
     doc.text(`Details: ${generalInfo.details}`, 10, 70);
     
-
 
     setResumeData({
       fullname: generalInfo.fullname,

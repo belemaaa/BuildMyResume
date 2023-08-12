@@ -26,7 +26,18 @@ const Experience = ({setExperience}) => {
     const handleFormSubmit = (e) => {
         e.preventDefault();
         const formData = {
-            
+            e1Date,
+            e1Title,
+            e1Role,
+            e1Description,
+            e2Date,
+            e1Title,
+            e2Role,
+            e2Description,
+            e3Date,
+            e3Title,
+            e3Role,
+            e3Description
         };
         setExperience(formData)
         navigate('/education');
@@ -44,11 +55,15 @@ const Experience = ({setExperience}) => {
 
             <form method='POST' onSubmit={handleFormSubmit} className='experienceform'>
                 <div className='e-box'>
-                    <label className='details-lbl font-bold'>Experience 1</label><br/>
+                    <label className='details-lbl font-bold'>Experience 1 
+                        <span className='text-red-700 pl-1'>*</span>
+                    </label><br/>
                     <label>Date:</label><br/>
                     <input 
                         className='border'
                         type='text'
+                        value={e1Date}
+                        onChange={(e) => setE1Date(e.target.value)}
                         required
                     />
                     <br/>
@@ -56,6 +71,8 @@ const Experience = ({setExperience}) => {
                     <input 
                         className='border'
                         type='text'
+                        value={e1Title}
+                        onChange={(e) => setE1Title(e.target.value)}
                         required
                     />
                     <br/>
@@ -63,6 +80,8 @@ const Experience = ({setExperience}) => {
                     <input 
                         className='border'
                         type='text'
+                        value={e1Role}
+                        onChange={(e) => setE1Role(e.target.value)}
                         required
                     />
                     <br/>
@@ -71,7 +90,81 @@ const Experience = ({setExperience}) => {
                     <textarea 
                         className='e-textarea border'
                         type='text'
+                        value={e1Description}
+                        onChange={(e) => setE1Description(e.target.value)}
                         required
+                    />
+                </div>
+
+                <div className='e-box mt-10'>
+                    <label className='details-lbl font-bold'>Experience 2</label><br/>
+                    <label>Date:</label><br/>
+                    <input 
+                        className='border'
+                        type='text'
+                        value={e2Date}
+                        onChange={(e) => setE2Date(e.target.value)}
+                    />
+                    <br/>
+                    <label>Job title:</label><br/>
+                    <input 
+                        className='border'
+                        type='text'
+                        value={e2Title}
+                        onChange={(e) => setE2Title(e.target.value)}
+                    />
+                    <br/>
+                    <label>Job role:</label><br/>
+                    <input 
+                        className='border'
+                        type='text'
+                        value={e2Role}
+                        onChange={(e) => setE2Role(e.target.value)}
+                    />
+                    <br/>
+                    <label>Job description <span className='text-sm font-semibold'>(what are some things you achieved or <br className='hidden md:flex'/>  
+                    were in charge of doing?)</span>:</label><br/>
+                    <textarea 
+                        className='e-textarea border'
+                        type='text'
+                        value={e2Description}
+                        onChange={(e) => setE2Description(e.target.value)}
+                    />
+                </div>
+
+                <div className='e-box mt-10'>
+                    <label className='details-lbl font-bold'>Experience 3</label><br/>
+                    <label>Date:</label><br/>
+                    <input 
+                        className='border'
+                        type='text'
+                        value={e3Date}
+                        onChange={(e) => setE3Date(e.target.value)}
+                    />
+                    <br/>
+                    <label>Job title:</label><br/>
+                    <input 
+                        className='border'
+                        type='text'
+                        value={e3Title}
+                        onChange={(e) => setE3Title(e.target.value)}
+                    />
+                    <br/>
+                    <label>Job role:</label><br/>
+                    <input 
+                        className='border'
+                        type='text'
+                        value={e3Role}
+                        onChange={(e) => setE3Role(e.target.value)}
+                    />
+                    <br/>
+                    <label>Job description <span className='text-sm font-semibold'>(what are some things you achieved or <br className='hidden md:flex'/>  
+                    were in charge of doing?)</span>:</label><br/>
+                    <textarea 
+                        className='e-textarea border'
+                        type='text'
+                        value={e3Description}
+                        onChange={(e) => setE3Description(e.target.value)}
                     />
                 </div>
 

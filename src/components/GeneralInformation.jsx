@@ -66,6 +66,7 @@ const GeneralInformation = ({setGeneralInfo}) => {
                                 className='border'
                                 type='text'
                                 maxLength={100}
+                                value={fullname}
                                 onChange={(e) => setFullname(e.target.value)}
                                 required
                             />
@@ -77,6 +78,7 @@ const GeneralInformation = ({setGeneralInfo}) => {
                                 type='text'
                                 className='border'
                                 maxLength={250}
+                                value={address}
                                 onChange={(e) => setAddress(e.target.value)}
                                 required
                             />
@@ -87,6 +89,7 @@ const GeneralInformation = ({setGeneralInfo}) => {
                             <input 
                                 type='phone'
                                 className='border'
+                                value={phone}
                                 onChange={(e) => setPhone(e.target.value)}
                                 required
                             />
@@ -98,6 +101,7 @@ const GeneralInformation = ({setGeneralInfo}) => {
                                 type='email'
                                 className='border'
                                 maxLength={250}
+                                value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 required
                             />
