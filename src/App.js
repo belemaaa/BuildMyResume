@@ -5,11 +5,12 @@ import GeneralInformation from './components/GeneralInformation';
 import PersonalData from './components/PersonalData';
 import Resume from './components/Resume';
 import { useState } from 'react';
-import PDFResume from './components/PDFResume';
+import Experience from './components/Experience';
 
 function App() {
   const [generalInfo, setGeneralInfo] = useState({})
   const [personalData, setPersonalData] = useState({})
+  const [experience, setExperience] = useState({})
   return (
     <div>
       <Router>
@@ -17,13 +18,11 @@ function App() {
           <Route path='/' exact element={<SplashChange/>} />
           <Route path='/general_information' element={<GeneralInformation setGeneralInfo={setGeneralInfo}/>}/>
           <Route path='/personal_data' element={<PersonalData setPersonalData={setPersonalData}/>} />
-          <Route path='/pdf' element={<Resume/>}/>
-          <Route 
-            path='/resume' 
-            element={
-              <Resume 
+          <Route path='/experience' element={<Experience setExperience={setExperience}/>}/>
+          <Route path='/resume' element={<Resume 
                 generalInfo={generalInfo} 
                 personalData={personalData}
+                experience={experience}
               />} 
           />
         </Routes>

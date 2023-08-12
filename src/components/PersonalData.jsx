@@ -22,7 +22,7 @@ const PersonalData = ({setPersonalData}) => {
           maritalStatus
         };
         setPersonalData(formData)
-        navigate('/resume');
+        navigate('/experience');
     };
 
   return (
