@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
 import SquareLoader from "react-spinners/SquareLoader";
+import Resume from './Resume'
 
 const GeneralInformation = () => {
     useEffect(() => {
@@ -14,23 +15,23 @@ const GeneralInformation = () => {
     const [details, setDetails] = useState('')
     const navigate = useNavigate()
 
-    const [details1Array, setDetails1Array] = useState({});
+    const [details1, setDetails1] = useState(null);
 
     const handleFormSubmit = (e) => {
       e.preventDefault();
       const formData = {
-        fullname,
-        address,
-        phone,
-        email,
-        details,
+        fullname: fullname,
+        address: address,
+        phone: phone,
+        email: email,
+        details: details
       };
-      setDetails1Array(formData);
+      setDetails1(formData);
   
       // Save the form data to localStorage as an object
       localStorage.setItem('generalInformation', JSON.stringify(formData));
   
-      navigate('/personal_data');
+      navigate('/resume');
     };
 
     // loader
@@ -122,9 +123,9 @@ const GeneralInformation = () => {
                     </form>
                 </div>
         }     
-        {/* <div>
-            <Resume data={details1Array} />
-        </div> */}
+        <div className='hidden'>
+            <Resume {...details1} />
+        </div>
     </div>
   )
 }

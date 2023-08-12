@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 
 const Resume = (props) => {
-    // const {fullname, address, phone, email, details} = props.data
+    const {fullname, address, phone, email, details} = props
 
   return (
     <div>
-        <p>Resume</p>
+        <p>
+          {props.fullname}
+        </p>
     </div>
   );
 };
