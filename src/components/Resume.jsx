@@ -1,14 +1,16 @@
 import React from 'react';
 
-const Resume = ({gi_details}) => {
-    console.log(gi_details)
+const Resume = ({generalInfo, personalData}) => {
+    console.log(generalInfo)
     return (
         <div>
-            <p>Full Name: {gi_details.fullname}</p>
-            <p>Address: {gi_details.address}</p>
-            <p>Phone: {gi_details.phone}</p>
-            <p>Email: {gi_details.email}</p>
-            <p>Details: {gi_details.details}</p>
+            <p>Full Name: {generalInfo.fullname}</p>
+            <p>Address: {generalInfo.address}</p>
+            <p>Phone: {generalInfo.phone}</p>
+            <p>Email: {generalInfo.email}</p>
+            <p>Details: {generalInfo.details}</p>
+
+            <p>{personalData.sex}</p>
         </div>
     );
 };

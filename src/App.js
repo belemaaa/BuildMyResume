@@ -7,15 +7,23 @@ import Resume from './components/Resume';
 import { useState } from 'react';
 
 function App() {
-  const [gi_details, setGIDetails] = useState({})
+  const [generalInfo, setGeneralInfo] = useState({})
+  const [personalData, setPersonalData] = useState({})
   return (
     <div>
       <Router>
         <Routes>
           <Route path='/' exact element={<SplashChange/>} />
-          <Route path='/general_information' element={<GeneralInformation setGIDetails={setGIDetails}/>}/>
-          <Route path='/personal_data' element={<PersonalData/>} />
-          <Route path='/resume' element={<Resume gi_details={gi_details}/>} />
+          <Route path='/general_information' element={<GeneralInformation setGeneralInfo={setGeneralInfo}/>}/>
+          <Route path='/personal_data' element={<PersonalData setPersonalData={setPersonalData}/>} />
+          <Route 
+            path='/resume' 
+            element={
+              <Resume 
+                generalInfo={generalInfo} 
+                personalData={personalData}
+              />} 
+          />
         </Routes>
       </Router>
     </div>

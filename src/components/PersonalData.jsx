@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 
-const PersonalData = () => {
+const PersonalData = ({setPersonalData}) => {
     useEffect(() => {
         window.scrollTo(0,0)
     }, [])
@@ -21,12 +21,8 @@ const PersonalData = () => {
           state,
           maritalStatus
         };
-        setDetails2Array([...details2Array, formData]);
-
-        // Save data to localStorage
-        localStorage.setItem('personalData', JSON.stringify(details2Array));
-
-        navigate('/experience');
+        setPersonalData(formData)
+        navigate('/resume');
     };
 
   return (

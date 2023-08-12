@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import SquareLoader from "react-spinners/SquareLoader";
 import Resume from './Resume'
 
-const GeneralInformation = ({setGIDetails}) => {
+const GeneralInformation = ({setGeneralInfo}) => {
     useEffect(() => {
         window.scrollTo(0,0)
     }, [])
@@ -26,8 +26,8 @@ const GeneralInformation = ({setGIDetails}) => {
             details,
         };
         console.log('Form data:', formData); 
-        setGIDetails(formData);
-        navigate('/resume');
+        setGeneralInfo(formData);
+        navigate('/personal_data');
     };
 
     // loader
