@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import SquareLoader from "react-spinners/SquareLoader";
 import Resume from './Resume'
 
-const GeneralInformation = () => {
+const GeneralInformation = ({setGIDetails}) => {
     useEffect(() => {
         window.scrollTo(0,0)
     }, [])
@@ -14,24 +14,20 @@ const GeneralInformation = () => {
     const [email, setEmail] = useState('')
     const [details, setDetails] = useState('')
     const navigate = useNavigate()
-
-    const [details1, setDetails1] = useState(null);
+    const [details1, setDetails1] = useState({});
 
     const handleFormSubmit = (e) => {
-      e.preventDefault();
-      const formData = {
-        fullname: fullname,
-        address: address,
-        phone: phone,
-        email: email,
-        details: details
-      };
-      setDetails1(formData);
-  
-      // Save the form data to localStorage as an object
-      localStorage.setItem('generalInformation', JSON.stringify(formData));
-  
-      navigate('/resume');
+        e.preventDefault();
+        const formData = {
+            fullname,
+            address,
+            phone,
+            email,
+            details,
+        };
+        console.log('Form data:', formData); 
+        setGIDetails(formData);
+        navigate('/resume');
     };
 
     // loader
@@ -123,9 +119,7 @@ const GeneralInformation = () => {
                     </form>
                 </div>
         }     
-        <div className='hidden'>
-            <Resume {...details1} />
-        </div>
+        {/* {details1 && <Resume {...details1}/>} */}
     </div>
   )
 }
