@@ -179,6 +179,19 @@
     margin-top: 60px;
     margin-bottom: 20px;
 }
+.heading-p{
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 30px;
+}
+.heading-p2{
+    text-align: center;
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 30px;
+    color: #013e30;
+}
 .details-box label{
     font-weight: 420;
     font-size: 14px;
@@ -238,18 +251,22 @@
 @media(min-width: 668px){
     .experienceform{
         align-self: center;
-        margin-left: 140px;
+        margin-left: 130px;
     }
+}
+.details-div-e{
+    margin-top: 60px;
 }
 @media(min-width: 432px){
     .details-div-e{
-        padding: 70px;
+        padding: 40px;
         border-radius: 10px;
         --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
         --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
         box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
         margin-bottom: 50px;
-        /* width: 1000px; */
+        width: 800px;
+        margin-top: 40px;
     }
 }
 .e-box input{
@@ -262,8 +279,26 @@
 }
 @media(min-width: 1024px){
     .e-box input{
-        width: 420px;
+        width: 450px;
         height: 38px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        padding: 10px;
+        font-size: 13px;
+    }
+}
+.e-textarea{
+    width: 350px;
+    height: 200px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 13px;
+}
+@media(min-width: 1024px){
+    .e-textarea{
+        width: 440px;
+        height: 200px;
         border-radius: 5px;
         margin-bottom: 20px;
         padding: 10px;
