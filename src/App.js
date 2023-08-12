@@ -5,6 +5,7 @@ import GeneralInformation from './components/GeneralInformation';
 import PersonalData from './components/PersonalData';
 import Resume from './components/Resume';
 import { useState } from 'react';
+import PDFResume from './components/PDFResume';
 
 function App() {
   const [generalInfo, setGeneralInfo] = useState({})
@@ -16,6 +17,7 @@ function App() {
           <Route path='/' exact element={<SplashChange/>} />
           <Route path='/general_information' element={<GeneralInformation setGeneralInfo={setGeneralInfo}/>}/>
           <Route path='/personal_data' element={<PersonalData setPersonalData={setPersonalData}/>} />
+          <Route path='/pdf' element={<Resume/>}/>
           <Route 
             path='/resume' 
             element={
