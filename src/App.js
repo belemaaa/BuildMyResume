@@ -13,9 +13,9 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' exact element={<SplashChange/>} />
-          <Route path='/general_information' element={<GeneralInformation/>} setGIDetails={setGIDetails}/>
+          <Route path='/general_information' element={<GeneralInformation setGIDetails={setGIDetails}/>}/>
           <Route path='/personal_data' element={<PersonalData/>} />
-          <Route path='/resume' element={<Resume/>} gi_details={gi_details} />
+          <Route path='/resume' element={<Resume gi_details={gi_details}/>} />
         </Routes>
       </Router>
     </div>
