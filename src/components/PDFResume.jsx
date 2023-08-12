@@ -10,12 +10,27 @@ const styles = StyleSheet.create({
     padding: 30,
   },
   heading: {
-    fontSize: 24,
+    fontSize: 28,
     marginBottom: 20,
+    fontWeight: 600,
+    textAlign: 'center',
+    textTransform: 'capitalize',
   },
   text: {
-    fontSize: 14,
-    marginBottom: 10,
+    fontSize: 11,
+    marginBottom: 8,
+    marginLeft: 20,
+  },
+  emailtext: {
+    fontSize: 11,
+    marginBottom: 8,
+    marginLeft: 20,
+    color: 'blue',
+    fontWeight: 450,
+  },
+  variable: {
+    fontSize: 11,
+    fontWeight: 500
   },
 });
 
@@ -28,15 +43,17 @@ const PDFResume = (props) => {
         details
     } = props
   return (
-    <div>
+    <div className='resume'>
         <Document>
             <Page size="A4" style={styles.page}>
-                <Text style={styles.heading}>Resume</Text>
-                <Text style={styles.text}>Full Name: {fullname}</Text>
-                <Text style={styles.text}>Address: {address}</Text>
-                <Text style={styles.text}>Phone: {phone}</Text>
-                <Text style={styles.text}>Email: {email}</Text>
-                <Text style={styles.text}>Details: {details}</Text>
+                <Text style={styles.heading}>{fullname}</Text>
+                <Text style={styles.variable}>Address: <span style={styles.text}>{address}</span></Text>
+                <Text style={styles.variable}>Telephone: <span style={styles.text}>{phone}</span></Text>
+                <Text style={styles.variable}>E-mail: <span style={styles.emailtext}>{email}</span></Text>
+
+                <div className='border'></div>
+
+                <Text style={styles.text}>{details}</Text>
             </Page>
         </Document>
     </div>
