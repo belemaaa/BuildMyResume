@@ -51,13 +51,10 @@ const GeneralInformation = ({setGeneralInfo}) => {
                     className='loader'
                 />
             :
-
                 <div className='details-div'>
                     <p className='p1'>To build your resume, please fill out the fields below</p>
                     <p className='p2'>Note: These details will represent the fields in your resume.</p>
-
                     <p className='form-heading'>(GENERAL INFORMATION)</p>
-
                     <form method='POST' onSubmit={handleFormSubmit} className='details1form'>
                         <div className='details-box'>
                             <label className='details-lbl'>Fullname:</label> <br/>
@@ -70,7 +67,6 @@ const GeneralInformation = ({setGeneralInfo}) => {
                                 required
                             />
                         </div>
-
                         <div className='details-box'>
                             <label>Address:</label><br/>
                             <input 
@@ -82,7 +78,6 @@ const GeneralInformation = ({setGeneralInfo}) => {
                                 required
                             />
                         </div>
-
                         <div className='details-box'>
                             <label>Phone:</label><br/>
                             <input 
@@ -94,7 +89,6 @@ const GeneralInformation = ({setGeneralInfo}) => {
                                 required
                             />
                         </div>                    
-
                         <div className='details-box'>
                             <label>Email:</label><br/>
                             <input 
@@ -107,7 +101,6 @@ const GeneralInformation = ({setGeneralInfo}) => {
                                 required
                             />
                         </div>
-
                         <div className='details-box'>
                             <label>Tell us something about yourself...</label><br/>
                             <textarea 
@@ -117,7 +110,6 @@ const GeneralInformation = ({setGeneralInfo}) => {
                                 required
                             />
                         </div>
-
                         <button type='submit' className='next-btn'>
                             Next
                         </button>
