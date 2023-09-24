@@ -30,7 +30,6 @@ const GeneralInformation = ({setGeneralInfo}) => {
         navigate('/personal_data');
     };
 
-    // loader
     const [loading, setLoading] = useState(false)
     useEffect(() => {
         setLoading(true)
@@ -91,6 +90,7 @@ const GeneralInformation = ({setGeneralInfo}) => {
                                 className='border'
                                 value={phone}
                                 onChange={(e) => setPhone(e.target.value)}
+                                autoComplete='on'
                                 required
                             />
                         </div>                    
@@ -103,6 +103,7 @@ const GeneralInformation = ({setGeneralInfo}) => {
                                 maxLength={250}
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
+                                autoComplete='on'
                                 required
                             />
                         </div>
@@ -123,7 +124,6 @@ const GeneralInformation = ({setGeneralInfo}) => {
                     </form>
                 </div>
         }     
-        {/* {details1 && <Resume {...details1}/>} */}
     </div>
   )
 }
